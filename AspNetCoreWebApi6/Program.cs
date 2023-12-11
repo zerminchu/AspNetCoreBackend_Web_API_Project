@@ -10,11 +10,10 @@ namespace AspNetCoreWebApi6
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<MovieContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("MovieContext")));
+            builder.Services.AddDbContext<MenuItemContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MenuItemContext")));
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
